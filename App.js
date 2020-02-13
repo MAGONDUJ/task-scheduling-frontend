@@ -1,19 +1,28 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from "react";
+import { createStore } from "redux";
+import Home from "./src/components/Home";
+import { Provider } from "react-redux";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+const initialState = {
+  content: "welcome"
+};
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "WELCOME":
+      return { content: "welcome" };
+    case "LOGIN":
+      return { content: "login" };
+  }
+  return state;
+};
+const store = createStore(reducer);
+class App extends React.Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <Home />
+      </Provider>
+    );
+  }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
