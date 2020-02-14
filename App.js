@@ -4,7 +4,8 @@ import Home from "./src/components/Home";
 import { Provider } from "react-redux";
 
 const initialState = {
-  content: "welcome"
+  content: "welcome",
+  token: ""
 };
 const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -12,6 +13,9 @@ const reducer = (state = initialState, action) => {
       return { content: "welcome" };
     case "LOGIN":
       return { content: "login" };
+    case "TASKS":
+      //console.log("Token payload here", action.payload);
+      return { content: "tasks", token: action.payload };
   }
   return state;
 };

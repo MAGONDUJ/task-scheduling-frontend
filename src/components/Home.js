@@ -11,6 +11,7 @@ import { connect } from "react-redux";
 import Header from "./Header";
 import Welcome from "./Welcome";
 import Login from "./Login";
+import Tasks from "./Tasks";
 
 class Home extends React.Component {
   render() {
@@ -34,6 +35,16 @@ class Home extends React.Component {
 
           {/* content */}
           <Login />
+        </View>
+      );
+    } else if (this.props.content == "tasks") {
+      return (
+        <View style={styles.container}>
+          {/* header */}
+          <Header />
+
+          {/* content */}
+          <Tasks />
         </View>
       );
     }
