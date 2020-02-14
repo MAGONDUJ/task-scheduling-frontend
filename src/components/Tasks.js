@@ -87,8 +87,9 @@ class Tasks extends React.Component {
             data={this.state.tasks}
             renderItem={({ item }) => (
               <Text style={styles.item}>
-                customer_first_name:{item.customer_first_name}{" "}
-                personnel_first_name:{item.personnel_first_name}
+                task_id:{item.task_id} customer_first_name:
+                {item.customer_first_name} personnel_first_name:
+                {item.personnel_first_name}
                 personnel_other_name:{item.personnel_other_name}{" "}
                 customer_last_name:{item.customer_last_name}
                 customer_phone:{item.customer_phone} agentId:{item.agentId}{" "}
