@@ -10,3 +10,5 @@ Clone repo
 (i)   yarn  
 (ii)  expo start  
 (iii) install expo app in your phone and scan the QR code provided to preview the app  
+  
+  -Download andriod app: https://github.com/MAGONDUJ/task-scheduling-frontend/blob/master/task-scheduling-frontend.apk
