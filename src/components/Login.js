@@ -49,6 +49,7 @@ class Login extends React.Component {
           style={styles.input}
           placeholder="07222..."
           onChangeText={this.setPhone}
+          keyboardType={"numeric"}
         />
         <Text style={styles.text}>Password:</Text>
         <TextInput

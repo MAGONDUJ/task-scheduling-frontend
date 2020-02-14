@@ -13,3 +13,22 @@ exports.authLogin = async params => {
     });
   return res;
 };
+exports.getTasks = async params => {
+  let res = {};
+  await axios
+    .get(
+      `${url}/tasks/assigned?page=${params.page}&limit=${params.limit}&order=${params.order}&orderMethod=${params.orderMethod}`,
+      {
+        headers: {
+          accessToken: params.token
+        }
+      }
+    )
+    .then(resp => {
+      res = resp.data;
+    })
+    .catch(err => {
+      res = err.response.data;
+    });
+  return res;
+};

@@ -2,9 +2,9 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 6209,
+  "packagerPid": 10532,
   "expoServerNgrokUrl": "https://cr-82b.cooliek.task-scheduling-frontend.exp.direct",
   "packagerNgrokUrl": "https://packager.cr-82b.cooliek.task-scheduling-frontend.exp.direct",
-  "ngrokPid": 6230,
+  "ngrokPid": 10552,
   "webpackServerPort": null
 }
